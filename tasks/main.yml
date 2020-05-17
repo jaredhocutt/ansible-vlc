@@ -1,0 +1,12 @@
+---
+# tasks file for vlc
+
+- name: Setup RPMFusion repositories
+  import_role:
+    name: jaredhocutt.rpmfusion
+
+- name: Install vlc
+  dnf:
+    name: vlc
+    state: present
+  become: yes
